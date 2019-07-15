@@ -1,0 +1,4 @@
+.new {
+  @include make-col(10);
+  background-color: blue;
+}
