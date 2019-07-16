@@ -1,36 +1,11 @@
-/* VARIABLES */
-$padd_content : 17px;
+$BLACK : 'Avenir LT Std Black';
+$BOLD : 'Avenir Next LT Pro Bold';
+$REGULAR : 'Avenir';
+$BOOK : 'Avenir LT Std Book';
 
-/*COLORS*/
-$black      : #000000;
-$white      : #ffffff;
+$COLOR_HEADER: #676a6c;
+$COLOR_AZUL: #2d84cc;
+$COLOR_CELESTE: #21a8d8;
 
-/*GREYS*/
-$grey_ee       : #eeeeee;
-$grey_fa       : #fafafa;
-$grey_99       : #999999;
-$grey_66       : #666666;
-$grey_cc       : #cccccc;
-$grey_87       : #878787;
-$grey_c3       : #c3c3c3;
-$grey_dd       : #dddddd;
-$grey_f6       : #f6f6f6;
-
-/*----------------------*/
-$violeta       : #409;
-$magenta       : #cf0096;
-$active_hover  : #006afd;
-$naranja       : #ff6e16;
-$rojo          : #ff2a5b;
-
-/*EASING*/
-$cubic-out : cubic-bezier(0.22, 0.61, 0.36, 1);
-
-/*PADDINGS*/
-$padd_Top_Bottom_XS : 1.5em;
-$padd_Left_Right_XS : 1.5em;
-
-$padd_Top_Bottom_SM : 4.2em;
-$padd_Left_Right_SM : 2em;
-
-$size_vitrina_xs : 43vw;
+$primary: $COLOR_AZUL !default;
+$secondary: $COLOR_CELESTE !default;

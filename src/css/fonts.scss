@@ -1,0 +1,59 @@
+@font-face {
+  font-family: $BOLD;
+  src: url('../fonts/subset-AvenirNextLTPro-Bold.eot');
+  src: local('Avenir Next LT Pro Bold'), local('AvenirNextLTPro-Bold'),
+      url('../fonts/subset-AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/subset-AvenirNextLTPro-Bold.woff2') format('woff2'),
+      url('../fonts/subset-AvenirNextLTPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $REGULAR;
+  src: url('../fonts/subset-Avenir-Roman.eot');
+  src: local('12 Avenir 55 Roman 05173'), local('Avenir-Roman'),
+      url('../fonts/subset-Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/subset-Avenir-Roman.woff2') format('woff2'),
+      url('../fonts/subset-Avenir-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $BLACK;
+  src: url('../fonts/subset-AvenirLTStd-Black.eot');
+  src: local('Avenir LT Std 95 Black'), local('AvenirLTStd-Black'),
+      url('../fonts/subset-AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/subset-AvenirLTStd-Black.woff2') format('woff2'),
+      url('../fonts/subset-AvenirLTStd-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $BOOK;
+  src: url('../fonts/subset-AvenirLTStd-Book.eot');
+  src: local('Avenir LT Std 45 Book'), local('AvenirLTStd-Book'),
+      url('../fonts/subset-AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/subset-AvenirLTStd-Book.woff2') format('woff2'),
+      url('../fonts/subset-AvenirLTStd-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.black {
+  font-family: $BLACK, sans-serif;
+}
+
+.bold {
+  font-family: $BOLD, sans-serif;
+}
+
+.regular {
+  font-family: $REGULAR, sans-serif;
+}
+
+.book {
+  font-family: $BOOK, sans-serif;
+}

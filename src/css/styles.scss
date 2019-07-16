@@ -1,5 +1,11 @@
-@import "./node_modules/bootstrap/scss/bootstrap";
 @import "variables";
-@import "mediaqueries";
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "mixins/breakpoints";
+@import "utils/styles";
+@import "fonts";
 @import "reset";
 @import "general";
+@import "./header/styles";
+@import "./footer/styles";
+@import "./hero/styles";
+@import "button";

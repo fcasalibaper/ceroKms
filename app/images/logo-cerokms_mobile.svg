@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101" height="36" viewBox="0 0 101 36">
+    <g fill="none" fill-rule="evenodd">
+        <text fill="#373737" font-family="OpenSans-Bold, Open Sans" font-size="20.25" font-weight="bold" transform="translate(-1)">
+            <tspan x="0" y="29.45">Cero</tspan>
+        </text>
+        <path fill="#0F89CE" d="M48.95.5h51.3v35h-51.3z"/>
+        <text fill="#FFF" font-family="OpenSans-Bold, Open Sans" font-size="20.25" font-weight="bold" transform="translate(-1)">
+            <tspan x="51.3" y="29.45">Kms</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="41" viewBox="0 0 90 41">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="90" height="41" fill="#2D84CC" rx="6"/>
+        <text fill="#FFF" font-family="OpenSans-Bold, Open Sans" font-size="15" font-weight="bold">
+            <tspan x="12" y="27">CeroKms</tspan>
+        </text>
+    </g>
+</svg>

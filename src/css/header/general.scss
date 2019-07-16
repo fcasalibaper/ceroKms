@@ -1,0 +1,39 @@
+header {
+  position: relative;
+  .row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include break(xs) {
+
+    }
+  }
+
+  .logo {
+    @include break(xs) {
+      display: flex;
+      
+      @include make-col(12);
+      justify-content: center;
+
+      svg {
+        align-self: center;
+      }
+    }
+    @include upTo(xs) {
+      @include make-col(3);
+    }
+    svg {
+      max-width: 90px;
+    }
+  }
+
+  .header__nav {
+    @include upTo(xs) {
+      @include make-col(9);
+      justify-content: flex-end;
+    }
+  }
+}

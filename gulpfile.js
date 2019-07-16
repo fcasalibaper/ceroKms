@@ -1,5 +1,6 @@
 var gulp    = require('gulp');
 var babel = require('gulp-babel');
+var php  = require('gulp-connect-php');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
@@ -92,25 +93,44 @@ gulp.task('scripts', function() {
 // server
 gulp.task('browser-sync', function() {
   browserSync.init({
-    open:false,
-    // proxy: 'https://www.fravega.com/',
+    open:true,
     files: ['app/**'],
-    serveStatic: ['app'],
-    rewriteRules: [
-      {
-        match: new RegExp('https://fravega.vteximg.com.br/arquivos/'+nameFilesSrc+'.css'),
-        fn: function() {
-          return '/index.css';
-        }
-      },
-      {
-        match: new RegExp('https://fravega.vteximg.com.br/arquivos/'+nameFilesSrc+'.js'),
-        fn: function() {
-          return '/index.js';
-        }
-      }
-    ]
+    serveStatic: ['app']
   });
+});
+
+// server
+gulp.task('localServer', function() {
+    browserSync.init({
+      port:2345,
+      server: {
+          baseDir: "app/"
+      }
+    });
+});
+
+// php
+gulp.task('php', function() {
+  php.server({ 
+    open:true,
+    base: 'app',
+    port: 8020,
+    keepalive: true,
+    files: ['app/**'],
+    serveStatic: ['app']
+  })
+});
+
+gulp.task('connect-sync', function() {
+  connect.server({}, function (){
+    browserSync({
+      proxy: '127.0.0.1:8000'
+      });
+    });
+
+    gulp.watch('**/*.php').on('change', function () {
+      browserSync.reload();
+    });
 });
 
 // html
@@ -125,9 +145,12 @@ gulp.task('watch', function() {
   gulp.watch('./src/css/**/*.css', ['css']);
   gulp.watch('./src/css/**/*.scss', ['sass']);
   gulp.watch('./src/scripts/**/*.js', ['scripts']);
-  gulp.watch(['./app/*.html'], ['html']);
+  gulp.watch('./app/**/*.html', ['html']);
+  gulp.watch('./app/**/*.php', ['php']);
 });
 
 // Default task
-gulp.task("default", ["browser-sync","watch"]);
+gulp.task("default", ["browser-sync","php","watch"]);
+gulp.task("local", ["localServer","watch"]);
+gulp.task("connect-sync", ["php","watch"]);
 gulp.task("imagesmin", ["tinypng"]);

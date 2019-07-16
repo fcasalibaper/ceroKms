@@ -1,4 +1,77 @@
-.new {
-  @include make-col(10);
-  background-color: blue;
+// .new {
+//   // @include make-col(10);
+//   background-color: blue;
+
+//   @include upTo(xs) {
+//     background-color:red;
+//   }
+// }
+
+.container {
+  .row {
+    @include break(xs) {
+      padding: 0 23px;
+    }
+  }
+}
+
+.home__downText {
+  background-color: #f6f6f6;
+  padding: 38px 0;
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.54;
+    letter-spacing: -0.52px;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-right: 14px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.85;
+      letter-spacing: -0.43px;
+      color: rgba(0, 0, 0, 0.85);
+
+      b {font-weight: 900;}
+    }
+  }
+
+  &__seguroLogo {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(black, 0.035);
+    }
+
+    img {
+      max-width: 212px;
+    }
+  }
+
+  
 }
