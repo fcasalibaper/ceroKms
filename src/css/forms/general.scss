@@ -100,6 +100,10 @@
       justify-content: space-between;
       margin-bottom: 214px;
 
+      @include break(xs) {
+        margin-bottom: 99px;
+      }
+
       .col {
         display: flex;
         justify-content: space-between;

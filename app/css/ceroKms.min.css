@@ -7643,6 +7643,9 @@ body.menuVisible {
       display: flex;
       justify-content: space-between;
       margin-bottom: 214px; }
+      @media only screen and (min-width: 0) and (max-width: 575px) {
+        .forms form .nextForm {
+          margin-bottom: 99px; } }
       .forms form .nextForm .col {
         display: flex;
         justify-content: space-between;
