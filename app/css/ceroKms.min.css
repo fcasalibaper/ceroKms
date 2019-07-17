@@ -7663,10 +7663,10 @@ body.menuVisible {
       margin-bottom: 0; } }
   .form-row .col {
     padding: 0 10px;
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     @media only screen and (min-width: 0) and (max-width: 575px) {
       .form-row .col {
-        flex-direction: column;
         margin-bottom: 20px; } }
 
 form label {
