@@ -7584,6 +7584,9 @@ body.menuVisible {
     justify-content: space-between;
     padding: 30px 0;
     margin-bottom: 36px; }
+    @media only screen and (min-width: 0) and (max-width: 575px) {
+      .forms header {
+        padding: 26px 0; } }
     .forms header:before {
       content: '';
       position: absolute;
@@ -7602,6 +7605,9 @@ body.menuVisible {
       cursor: pointer; }
       .forms header span i {
         margin-right: 25px; }
+        @media only screen and (min-width: 0) and (max-width: 575px) {
+          .forms header span i {
+            margin-right: 8px; } }
       .forms header span p {
         font-size: 18px;
         font-weight: 500;
