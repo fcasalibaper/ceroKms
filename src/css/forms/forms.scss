@@ -2,9 +2,20 @@
   margin-right: -$INPUT_MARGINS / 2;
   margin-left: -$INPUT_MARGINS / 2;
   margin-bottom: 15px;
+
+  @include break(xs) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
   
   .col {
     padding: 0 $INPUT_MARGINS / 2;
+    display: flex;
+    
+    @include break(xs) {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -13,11 +24,13 @@ form {
     font-size: 17px;
     font-weight: 500;
     line-height: 1;
-    color: #353b50;
+    color: $COLOR_INPUT;
     margin-bottom: 15px;
+    order: -1;
 
     // for checkbox
     &.form-check-label {
+      order: 0;
       display: flex;
       align-items: flex-start;
       &::before {
@@ -46,6 +59,9 @@ form {
     letter-spacing: normal;
     padding: 5px 26px;
 
+    &:focus {
+      background-color: rgba(241, 241, 241, 0.24);
+    }
     &::placeholder {
       font-size: 17px;
       color: rgba(#353b50, 0.5);

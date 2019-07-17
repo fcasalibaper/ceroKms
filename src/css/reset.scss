@@ -46,6 +46,15 @@ img {
   height: auto;
 }
 
+input, button, a, .btn {
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 0;
+	}
+}
+
 .hidden-xs {
 	display: none !important;
 	@include upTo(xs) {

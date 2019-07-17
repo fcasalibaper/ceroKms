@@ -7135,6 +7135,10 @@ img {
   max-width: 100%;
   height: auto; }
 
+input:hover, input:active, input:focus, button:hover, button:active, button:focus, a:hover, a:active, a:focus, .btn:hover, .btn:active, .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0; }
+
 .hidden-xs {
   display: none !important; }
   @media only screen and (min-width: 577px) {
@@ -7298,13 +7302,13 @@ img {
         .header__nav li:last-child {
           margin-bottom: 0; } }
 
-header {
+.header {
   position: relative; }
   @media only screen and (min-width: 0) and (max-width: 575px) {
-    header {
+    .header {
       background-color: #fff;
       border-bottom: 1px solid #dddddd; }
-      header:after {
+      .header:after {
         content: '';
         position: absolute;
         top: 100%;
@@ -7312,28 +7316,28 @@ header {
         width: 100%;
         height: 43px;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0)); } }
-  header .row {
+  .header .row {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between; }
   @media only screen and (min-width: 0) and (max-width: 575px) {
-    header .logo {
+    .header .logo {
       display: flex;
       padding: 10px 0;
       justify-content: center;
       flex: 0 0 100%;
       max-width: 100%; }
-      header .logo svg {
+      .header .logo svg {
         align-self: center; } }
   @media only screen and (min-width: 577px) {
-    header .logo {
+    .header .logo {
       flex: 0 0 25%;
       max-width: 25%; } }
-  header .logo svg {
+  .header .logo svg {
     max-width: 90px; }
   @media only screen and (min-width: 577px) {
-    header .header__nav {
+    .header__nav {
       flex: 0 0 75%;
       max-width: 75%;
       justify-content: flex-end; } }
@@ -7575,11 +7579,23 @@ body.menuVisible {
     max-width: 600px; }
   .forms header {
     width: 100%;
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
-    border-bottom: solid 1px #e0e3e6;
     margin-bottom: 36px; }
+    .forms header:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #e0e3e6; }
+      @media only screen and (min-width: 0) and (max-width: 575px) {
+        .forms header:before {
+          width: 100vw; } }
     .forms header span {
       display: flex;
       align-items: center;
@@ -7591,6 +7607,9 @@ body.menuVisible {
         font-weight: 500;
         line-height: 1;
         color: #6d7278; }
+        @media only screen and (min-width: 0) and (max-width: 575px) {
+          .forms header span p {
+            font-size: 14px; } }
   .forms hgroup {
     display: flex;
     margin-bottom: 23px;
@@ -7602,9 +7621,15 @@ body.menuVisible {
       color: #353b50;
       display: flex;
       flex-direction: column; }
+      @media only screen and (min-width: 0) and (max-width: 575px) {
+        .forms hgroup h1 {
+          font-size: 24px; } }
       .forms hgroup h1 small {
         font-size: 27px;
         margin-top: 0.4em; }
+        @media only screen and (min-width: 0) and (max-width: 575px) {
+          .forms hgroup h1 small {
+            font-size: 20px; } }
   .forms form {
     flex: 0 0 100%;
     max-width: 100%; }
@@ -7623,16 +7648,27 @@ body.menuVisible {
   margin-right: -10px;
   margin-left: -10px;
   margin-bottom: 15px; }
+  @media only screen and (min-width: 0) and (max-width: 575px) {
+    .form-row {
+      flex-direction: column;
+      margin-bottom: 0; } }
   .form-row .col {
-    padding: 0 10px; }
+    padding: 0 10px;
+    display: flex; }
+    @media only screen and (min-width: 0) and (max-width: 575px) {
+      .form-row .col {
+        flex-direction: column;
+        margin-bottom: 20px; } }
 
 form label {
   font-size: 17px;
   font-weight: 500;
   line-height: 1;
   color: #353b50;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  order: -1; }
   form label.form-check-label {
+    order: 0;
     display: flex;
     align-items: flex-start; }
     form label.form-check-label::before {
@@ -7656,6 +7692,8 @@ form input.form-control {
   line-height: 1;
   letter-spacing: normal;
   padding: 5px 26px; }
+  form input.form-control:focus {
+    background-color: rgba(241, 241, 241, 0.24); }
   form input.form-control::placeholder {
     font-size: 17px;
     color: rgba(53, 59, 80, 0.5); }
@@ -7675,6 +7713,24 @@ form input[type="checkbox"] {
     background-repeat: no-repeat;
     background-position: 50% 50%; }
 
+.was-validated .form-control:valid:focus, .was-validated .form-control .is-valid:focus, .was-validated .form-control:valid:focus, .was-validated .form-control .is-valid:focus {
+  box-shadow: 0 0 0 0; }
+
+.was-validated .form-control:valid + label, .was-validated .form-control .is-valid + label, .was-validated .form-control:valid + label, .was-validated .form-control .is-valid + label {
+  color: #28a745; }
+
+.was-validated .form-control:invalid:focus, .was-validated .form-control .is-invalid:focus, .was-validated .form-control:invalid:focus, .was-validated .form-control .is-invalid:focus {
+  box-shadow: 0 0 0 0; }
+
+.was-validated .form-control:invalid + label, .was-validated .form-control .is-invalid + label, .was-validated .form-control:invalid + label, .was-validated .form-control .is-invalid + label {
+  color: #e02020; }
+
+.was-validated .form-check-input:valid ~ .form-check-label, .was-validated .form-check-input .is-valid ~ .form-check-label {
+  color: #353b50; }
+
+.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+  color: #353b50; }
+
 .btn {
   font-size: 18.5px;
   border-radius: 6.6px;
@@ -7686,6 +7742,9 @@ form input[type="checkbox"] {
     font-weight: 900;
     line-height: 1;
     color: #0272bc; }
+    @media only screen and (min-width: 0) and (max-width: 575px) {
+      .btn--link {
+        font-size: 14px; } }
   .btn--gradient {
     border-radius: 3px;
     height: 61px;

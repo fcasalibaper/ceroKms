@@ -14,6 +14,7 @@ export default function General() {
         ready: () => {
             ceroKms.toolResponsive();
             ceroKms.hamburguerMenu();
+            ceroKms.formValidation();
         },
 
         toolResponsive: () => {
@@ -37,6 +38,19 @@ export default function General() {
                 
                 $(this).toggleClass('active');
                 $('body').toggleClass('menuVisible');
+            });
+        },
+
+        formValidation : () => {
+            var forms = $('.needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
             });
         }
     };
