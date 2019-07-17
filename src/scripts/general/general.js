@@ -12,11 +12,11 @@ export default function General() {
         },
 
         ready: () => {
-            console.log('readyyyyyy')
             ceroKms.toolResponsive();
+            ceroKms.hamburguerMenu();
         },
 
-        toolResponsive : () => {
+        toolResponsive: () => {
             const toolHTML = `
                 <div class="toolresponsive">
                     <div class="toolresponsive__break toolresponsive__break--xl">XL</div>
@@ -29,6 +29,15 @@ export default function General() {
 
             $('body').append(toolHTML);
             
+        },
+
+        hamburguerMenu: () => {
+            $('.hamburger-button').on('click', function(event){
+                event.preventDefault();
+                
+                $(this).toggleClass('active');
+                $('body').toggleClass('menuVisible');
+            });
         }
     };
 

@@ -37,6 +37,7 @@
     "bootstrap": "^4.3.1",
     "browserify": "^14.4.0",
     "gulp-babel": "^7.0.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.0",
     "natives": "^1.1.6",
     "popper.js": "^1.15.0",

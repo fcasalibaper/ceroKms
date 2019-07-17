@@ -19,6 +19,7 @@ var precss  = require('precss');
 var rename = require("gulp-rename");
 var concat = require('gulp-concat');
 var notify  = require('gulp-notify');
+var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
  
 sass.compiler = require('node-sass');
@@ -66,9 +67,11 @@ gulp.task('css', function () {
 // scss
 gulp.task('sass', function () {
   return gulp.src('./src/css/styles.scss')
+    .pipe(sourcemaps.init())
     .pipe(rename(nameFilesSrc+".min.css"))
     .pipe( notify({ message: 'SCSS - complilado' }) )
     .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('./maps'))
     .pipe( gulp.dest('./app/css') )
 });
 

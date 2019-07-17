@@ -1,0 +1,52 @@
+.hamburger-button {
+  position: absolute;
+  transition: all $ANIMATION_TIMING $ANIMATION_EASING 120ms;
+	width: 30px;
+	height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 89%;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @extend .visible-xs;
+
+  span {
+    position: relative;
+    width: 18px;
+		height: 2px;
+		background-color: $COLOR_MENU_HAMBURGER;
+		justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 450ms $ANIMATION_EASING,
+                opacity $ANIMATION_TIMING $ANIMATION_EASING;
+    
+    &:nth-child(1) {
+      top: -3px;
+    }
+    
+    &:nth-child(2) {
+      top: 0px;
+    }
+
+    &:nth-child(3) {
+      top: 3px;
+    }
+    
+	}
+}	
+
+/* 2. Add the animation. */
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-25%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}

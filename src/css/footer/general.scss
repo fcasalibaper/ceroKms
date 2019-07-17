@@ -14,10 +14,22 @@
     position: absolute;
     top: 0;
     max-width: 800px;
+    pointer-events: none;
+    z-index: 0;
+
+    @include break(xs) {
+      max-width: 182%;
+      top: -48%;
+      left: -20%;
+    }
   }
 
   a {
-    white-space: nowrap
+    font-weight: 700;
+    white-space: nowrap;
+    @include break(xs) {
+      font-size: 14px;
+    }
   }
 
   &__sociales {

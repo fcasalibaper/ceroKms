@@ -1,6 +1,9 @@
 .hero {
   position: relative;
   padding: 86px 0 10px 0;
+  @include break(xs) {
+    padding: 79px 0 0 0;
+  }
 
   &__bg {
     width: 100%;
@@ -14,19 +17,37 @@
     &__img {
       position: absolute;
       top: 15%;
+
       &--bird {
         left: 30%;
         max-width: 77px;
+        @include break(xs) {
+          top: 10%;
+          left: 78%;
+          max-width: 63px;
+        }
       }
+
       &--bird2 {
         right: 7%;
         max-width: 77px;
+
+        @include break(xs) {
+          display: none;
+        }
       }
 
       &--cloud {
         max-width: 833px;
         left: 50%;
         transform: translateX(-50%);
+
+        @include break(xs) {
+          transform: translateX(0);
+          width: 206%;
+          left: -8%;
+          top: 5%;
+        }
       }
     }
   }
@@ -35,6 +56,10 @@
     @include make-col(5);
     flex-direction: row;
     flex-wrap: wrap;
+
+    @include break(xs) {
+      @include make-col(12);
+    }
 
     hgroup {
       display: flex;
@@ -47,18 +72,36 @@
         line-height: 1.19;
         letter-spacing: -0.67px;
         color: #051f61;
+
+        @include break(xs) {
+          font-size: 24px;
+        }
   
         span {
           font-weight: 500;
+          color: #8ea0d8;
         }
       }
     }
   }
 
   &__image {
+    position: relative; 
     display: flex;
-    @include make-col(7);
     justify-content: flex-end;
+    @include make-col(7);
+
+    @include break(xs) {
+      margin-top: 40px;
+      z-index: -1;
+      @include make-col(12);
+
+       img {
+         position: relative;
+         left: 55%;
+         max-width: 160%;
+       }
+    }
   }
 
   .row {
@@ -69,6 +112,12 @@
     margin-right: 19.5px;
     &:last-child {
       margin-right: 0;
+    }
+
+    @include break(xs) {
+      border-radius: 2px;
+      width: 100%;
+      margin-top: 10px;
     }
   }
 }

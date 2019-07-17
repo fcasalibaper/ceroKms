@@ -1,0 +1,22 @@
+.hamburger-button {
+  &.active {
+    right: calc(#{$PADDING_MOBILE} - 10px);
+    span {
+      background-color: white;
+      
+      &:nth-child(1) {
+        opacity: 0;
+      }
+  
+      &:nth-child(2) {
+        transform: rotate(45deg);
+        top: 0;
+      }
+  
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -2px;
+      }
+    }
+  }
+}

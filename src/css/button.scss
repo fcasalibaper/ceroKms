@@ -2,4 +2,27 @@
   font-size: 18.5px;
   border-radius: 6.6px;
   padding: .45em .75em;
+
+  &--link {
+    padding: 0;
+    border-radius: 0;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+    color: $COLOR_BUTTON_LINK;
+  }
+
+  &--gradient {
+    border-radius: 3px;
+    height: 61px;
+    background-image: radial-gradient(circle at 50% 50%, #0272bc, #541f70);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
