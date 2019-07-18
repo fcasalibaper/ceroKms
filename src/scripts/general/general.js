@@ -109,7 +109,7 @@ export default function General() {
                 }
             },
 
-            // 
+            // get li clickeed and pass them input clicked and new text of selecition
             getLiFiltered: (clicked) => {
                 const $ulText = $('ul.list-text');
                 const $ulLogos = $('ul.logoBrands');
@@ -143,7 +143,11 @@ export default function General() {
 
                 el.on('click', function() {
                     let text = `No se encontró mi modelo`;
-                    ceroKms.modal.printTextSelectedInInput(clicked, text);
+                    if (clicked.hasClass('open')) {
+                        // if => avoid click others lis
+                        ceroKms.modal.printTextSelectedInInput(clicked, text);
+                        clicked.removeClass('open');
+                    }
                 })
             },
 

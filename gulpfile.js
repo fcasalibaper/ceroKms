@@ -59,7 +59,7 @@ gulp.task('css', function () {
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename(nameFilesSrc+".css"))
     .pipe( gulp.dest('./app/css') )
-    .pipe( gulp.dest('app/arquivos') )
+    .pipe(cssmin())
     .pipe( notify({ message: 'CSS - complilado' }) )
     .pipe(browserSync.stream())
 });
@@ -67,10 +67,14 @@ gulp.task('css', function () {
 // scss
 gulp.task('sass', function () {
   return gulp.src('./src/css/styles.scss')
+    .pipe(csso({
+      debug: false
+    }))
     .pipe(sourcemaps.init())
     .pipe(rename(nameFilesSrc+".min.css"))
     .pipe( notify({ message: 'SCSS - complilado' }) )
     .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
     .pipe( gulp.dest('./app/css') )
 });
