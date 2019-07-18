@@ -13,7 +13,7 @@
         
         <header>
           <span>
-            <i><-</i>
+            <i></i>
             <p>Volver atrás</p>
           </span>
           <a href="#" class="btn btn--link btn--refinanciar">
@@ -31,7 +31,7 @@
         <form class="needs-validation" novalidate>
           <div class="form-row">
             <div class="col">
-              <input type="text" class="form-control" id="RUT" placeholder="123312313" required />
+              <input type="number" class="form-control" id="RUT" placeholder="123312313" required />
               <label for="RUT">
                 RUT*
               </label>
@@ -58,14 +58,14 @@
 
           <div class="form-row">
             <div class="col">
-              <input type="text" class="form-control" id="Email" placeholder="jcampos@mail.com" required />
+              <input type="email" class="form-control" id="Email" placeholder="jcampos@mail.com" required />
               <label for="Email">
                 Email*
               </label>
             </div>
 
             <div class="col">
-              <input type="text" class="form-control" id="ConfirmarEmail" placeholder="jcampos@mail.com" required />
+              <input type="email" class="form-control" id="ConfirmarEmail" placeholder="jcampos@mail.com" required />
               <label for="ConfirmarEmail">
                 Confirmar Email*
               </label>
@@ -75,7 +75,7 @@
 
           <div class="form-row">
             <div class="col">
-              <input type="text" class="form-control" id="Celular" placeholder="123312313" required />
+              <input type="tel" class="form-control" id="Celular" placeholder="123312313" required />
               <label for="Celular">
                 Celular*
               </label>
@@ -88,7 +88,7 @@
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="aceptarTerminos">
                 <label class="form-check-label" for="aceptarTerminos">
-                  Acepto los términos y condiciones
+                  Acepto los <span>términos y condiciones</span>
                 </label>
               </div>
             </div>
@@ -102,12 +102,10 @@
   </section>
 
   <!-- footer -->
+  <!-- footer -->
   <?php include("includes/footer.inc.html"); ?>
-
-  <script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-//]]></script>
-  <script type="text/javascript" src="scripts/ceroKms.min.js"></script>
+  <?php include("includes/modalMarca.inc.html"); ?>
+  <?php include("includes/scripts.inc.html"); ?>
 
 </body>
 

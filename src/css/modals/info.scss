@@ -1,0 +1,25 @@
+.modal-body {
+    
+    
+    ul.brands {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 49px;
+      overflow-y: scroll;
+      max-height: 450px;
+      columns: 100px 2;
+
+      li {
+        cursor: pointer;
+        font-size: 20px;
+        width: 50%;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #353b50;
+        margin-bottom: .5rem;
+      }
+    }
+  
+}

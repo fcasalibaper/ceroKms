@@ -22,12 +22,10 @@
     }
   }
 
-  
-
   .form-check-input {
-    &:invalid, .is-invalid {
-      & + label {}
-    }
+    // &:invalid, .is-invalid {
+    //   & + label {}
+    // }
 
     &:valid ~, .is-valid ~ {
       .form-check-label {
@@ -41,11 +39,12 @@
   color: $COLOR_INPUT;
 }
 
-
-
-
 .form-control {
-  &:focus {}
+  &:focus {
+    box-shadow: 0 0 0 0;
+    border: solid 1px $COLOR_BORDER;
+    background-color: rgba(241, 241, 241, 0.24);
+  }
 
 } 
   

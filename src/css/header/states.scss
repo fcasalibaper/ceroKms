@@ -12,7 +12,9 @@ body {
 }
 
 .header__nav {
-  transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+  @include break(xs) {
+    transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+  }
   li {
     &.active {
       &:before {
