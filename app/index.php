@@ -31,7 +31,7 @@
         </div>
 
         <figure class="hero__image">
-          <img src="./images/2018-toyota-camry-xse.png">
+          <img src="./images/2018-toyota-camry-xse@2x.png">
         </figure>
       </div>
     </div>

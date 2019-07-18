@@ -90,6 +90,10 @@
     display: flex;
     justify-content: flex-end;
     @include make-col(7);
+    
+    img {
+      max-width: 88%;
+    }
 
     @include break(xs) {
       margin-top: 40px;
