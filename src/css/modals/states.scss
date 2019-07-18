@@ -1,0 +1,19 @@
+.module {
+  display: none;
+  flex-direction: column;
+}
+
+.open {
+  
+  &-marca {
+    .module-marca {display: flex;}
+  }
+
+  &-modelo {
+    .module-modelo {display: flex;}
+  }
+
+  &-version {
+    .module-version {display: flex;}
+  }
+}

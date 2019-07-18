@@ -58,56 +58,119 @@ export default function General() {
         modal : {
             init: () => {
                 ceroKms.modal.inputClick();
-                ceroKms.modal.filterBrands();
+                ceroKms.modal.selectType();
             },
             inputClick: () => {
-                const el = $('.falseSelect');
-                el.click(function(e) {
-                    const  $this = $(this);
+                let $el = $('input.falseSelect');
+                
+                $el.click(function(e) {
+                    let $this = $(this);
+                    $this.addClass('open'); // avoid click others lis
                     ceroKms.modal.nameModal($this);
+                    ceroKms.modal.withOutModel($this);
+                    ceroKms.modal.getLiFiltered($this);
                 })
             },
 
             nameModal: (el) => {
                 const nameOfModal = el.attr('rel');
-
                 ceroKms.modal.typeOfModal.showTypeOfModal(nameOfModal)
                 ceroKms.modal.openHideModal(nameOfModal);
             },
 
-            filterBrands: () => {
-                const $modal = $('#modal');
+            selectType: () => {
                 const $search = $('input.search-input');
-                const $ul = $('ul.brands');
-                const $lis = $ul.find('li');
-
                 $search.on('input', function() {
+                    let that = this.value;
+                    ceroKms.modal.filterBrands(that);
+                });
+            },
 
-                    var that = this.value;
+            filterBrands: (filtered) => {
+                const $ulText = $('ul.list-text');
+                const $ulLogos = $('ul.logoBrands');
 
-                    console.log(that)
-                    $lis.hide().filter(function() {
-                        return $(this).text().toLowerCase().indexOf( that ) > -1;
+                const $liText = $ulText.find('li');
+                const $logoslis = $ulLogos.find('li');
+                
+                
+                if ( $liText.length > 0 ) {
+                    $liText.hide().filter(function() {
+                        return $(this).text().toLowerCase().indexOf( filtered ) > -1;
                     })
                     .show();
-               });
+                }
 
-                // $search.on('change', function(e) {
-                //     let text = $(this).val()
+                if ( $logoslis.length > 0 ) {
+                    $logoslis.hide().filter(function() {
+                        return $(this).find('img').attr('alt').toLowerCase().indexOf( filtered ) > -1;
+                    })
+                    .show();
+                }
+            },
 
-                //     $lis.filter(li => {
-                //         li.text() === text
-                //     })
-                // })
+            // 
+            getLiFiltered: (clicked) => {
+                const $ulText = $('ul.list-text');
+                const $ulLogos = $('ul.logoBrands');
+
+                const $liText = $ulText.find('li');
+                const $logoslis = $ulLogos.find('li');
+
+                $liText.on('click', function() {
+                    console.log('lptm: ',clicked);
+                    let text = $(this).text();
+                    if (clicked.hasClass('open')) {
+                         // if => avoid click others lis
+                        ceroKms.modal.printTextSelectedInInput(clicked, text);
+                        clicked.removeClass('open');
+                    }
+                })
+
+                $logoslis.on('click', function() {
+                    let text = $(this).find('img')[0].attributes[1].value;
+                    if (clicked.hasClass('open')) {
+                        // if => avoid click others lis
+                        ceroKms.modal.printTextSelectedInInput(clicked, text);
+                        clicked.removeClass('open');
+                    }
+                })
+
+            },
+
+            withOutModel: (clicked) => {
+                const el = $('span.withOutModel');
+
+                el.on('click', function() {
+                    let text = `No se encontró mi modelo`;
+                    ceroKms.modal.printTextSelectedInInput(clicked, text);
+                })
+            },
+
+            // clean input when close modal
+            clearInput: () => {
+                const $modal = $('#modal');
+                const $el = $modal.find('input.search-input');
+
+                ceroKms.modal.filterBrands('');
+
+                if ($el.length) {
+                    $el.val('');
+                }
+            },
+
+            // print selected text
+            printTextSelectedInInput: (el, text) => {
+                const $modal = $('#modal');
+                el.val(text);
+
+                // hide modal
+                $modal.modal('hide');
             },
 
             typeOfModal: {
                 showTypeOfModal: (nameOfModal) => {
-                    const $modal = $('#modal');
-                    const body = $modal.find('.modal-body');
-
                     ceroKms.modal.typeOfModal.changeTexts(nameOfModal);
-                    
                 },
                 changeTexts: (nameOfModal) => {
                     const $modal = $('#modal');
@@ -123,16 +186,23 @@ export default function General() {
                             title.text('Elija la modelo de su auto')
                             placeholder.attr('placeholder', 'Buscar por modelo')
                             break;
+                        case 'open-version':
+                            title.text('Elija el modelo de su auto')
+                            placeholder.attr('placeholder', 'Buscar por modelo')
+                            break;
                     }
                 }
             },
 
-
             openHideModal: (nameOfModalToHide) => {
-                const modal = $('#modal');
-                modal.addClass(nameOfModalToHide);
-                modal.on('hidden.bs.modal', function (e) {
-                    $(this).removeClass(nameOfModalToHide)
+                const $modal = $('#modal');
+                $modal.addClass(nameOfModalToHide);
+                $modal.on('hidden.bs.modal', function (e) {
+                    $(this).removeClass(nameOfModalToHide);
+                    ceroKms.modal.clearInput();
+
+                    // avoid onClick repetition 
+                    $('.falseSelect').removeClass('open');
                 });
             }
 

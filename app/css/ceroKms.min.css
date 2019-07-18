@@ -7837,16 +7837,16 @@ form input[type="checkbox"] {
   line-height: 1;
   color: #353b50; }
 
-.modal-body ul.brands {
+.modal-body ul.list {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 49px;
+  margin-top: 55px;
   overflow-y: scroll;
-  max-height: 450px;
+  max-height: 415px;
   columns: 100px 2; }
-  .modal-body ul.brands li {
+  .modal-body ul.list li {
     cursor: pointer;
     font-size: 20px;
     width: 50%;
@@ -7854,6 +7854,29 @@ form input[type="checkbox"] {
     line-height: 1.5;
     color: #353b50;
     margin-bottom: .5rem; }
+
+.modal-body ul.logoBrands {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  width: 100%; }
+  .modal-body ul.logoBrands li {
+    cursor: pointer;
+    min-width: 50px;
+    margin-right: 4rem; }
+    .modal-body ul.logoBrands li:last-child {
+      margin-right: 0; }
+
+.modal-body span.withOutModel {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0272bc; }
 
 .modal-body form.search input {
   width: 100%;
@@ -7874,6 +7897,19 @@ form input[type="checkbox"] {
   background-size: 15px; }
   .modal-body form.search input::placeholder {
     color: #94979b; }
+
+.module {
+  display: none;
+  flex-direction: column; }
+
+.open-marca .module-marca {
+  display: flex; }
+
+.open-modelo .module-modelo {
+  display: flex; }
+
+.open-version .module-version {
+  display: flex; }
 
 .btn {
   font-size: 18.5px;

@@ -1,25 +1,51 @@
 .modal-body {
-    
-    
-    ul.brands {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      margin-top: 49px;
-      overflow-y: scroll;
-      max-height: 450px;
-      columns: 100px 2;
+  ul.list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 55px;
+    overflow-y: scroll;
+    max-height: 415px;
+    columns: 100px 2;
 
-      li {
-        cursor: pointer;
-        font-size: 20px;
-        width: 50%;
-        font-weight: 500;
-        line-height: 1.5;
-        color: #353b50;
-        margin-bottom: .5rem;
+    li {
+      cursor: pointer;
+      font-size: 20px;
+      width: 50%;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #353b50;
+      margin-bottom: .5rem;
+    }
+  }
+
+  ul.logoBrands {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+
+    li {
+      cursor: pointer;
+      min-width: 50px;
+      margin-right: 4rem;
+
+      &:last-child {
+        margin-right: 0;
       }
     }
-  
+  }
+
+  span.withOutModel {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $COLOR_BUTTON_LINK;
+  }
 }
