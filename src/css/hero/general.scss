@@ -93,6 +93,7 @@
     
     img {
       max-width: 88%;
+      align-self: flex-start;
     }
 
     @include break(xs) {

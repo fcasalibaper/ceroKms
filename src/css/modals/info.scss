@@ -7,7 +7,14 @@
     margin-top: 55px;
     overflow-y: scroll;
     max-height: 415px;
-    columns: 100px 2;
+    
+    @include upTo(xs) {
+      columns: 100px 2;
+    }
+    @include break(xs) {
+      margin-top: 28px;
+      max-height: 50vh;
+    }
 
     li {
       cursor: pointer;
@@ -17,6 +24,11 @@
       line-height: 1.5;
       color: #353b50;
       margin-bottom: .5rem;
+
+      @include break(xs) {
+        width: 100%;
+        font-size: 18px;
+      }
     }
   }
 
@@ -27,6 +39,10 @@
     flex-direction: row;
     overflow-x: scroll;
     width: 100%;
+
+    @include break(xs) {
+      width: calc(100% + #{$MODAL_PADDING_MOBILE});
+    }
 
     li {
       cursor: pointer;
@@ -40,6 +56,7 @@
   }
 
   span.withOutModel {
+    margin-top: 5px;
     font-size: 20px;
     font-weight: 500;
     font-style: normal;
@@ -47,5 +64,12 @@
     line-height: normal;
     letter-spacing: normal;
     color: $COLOR_BUTTON_LINK;
+
+    @include break(xs) {
+      font-size: 18px;
+      order: -1;
+      margin-top: 28px;
+      margin-bottom: 5px;
+    }
   }
 }

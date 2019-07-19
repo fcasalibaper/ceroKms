@@ -16,6 +16,23 @@ export default function General() {
             ceroKms.hamburguerMenu();
             ceroKms.formValidation();
             ceroKms.modal.init();
+            ceroKms.typeTextArea();
+            
+        },
+
+        typeTextArea: () => {
+            const $textarea = $('textarea');
+            const $label = $textarea.siblings('label');
+            const $labelExist = $label.length > 0;
+
+            if ($labelExist || !$label.children('span').length > 0) {
+                $label.append('<span>500 carácteres</span>')
+            }
+            
+            $textarea.keyup(function(){
+                let textCount = $(this).val().length;
+                $label.find('span').text(`${500 - textCount} carácteres`);
+            });
         },
 
         toolResponsive: () => {

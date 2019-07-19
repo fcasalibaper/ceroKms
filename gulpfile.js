@@ -21,6 +21,7 @@ var concat = require('gulp-concat');
 var notify  = require('gulp-notify');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer')
  
 sass.compiler = require('node-sass');
 
@@ -75,6 +76,10 @@ gulp.task('sass', function () {
     .pipe( notify({ message: 'SCSS - complilado' }) )
     .pipe(sass().on('error', sass.logError))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(sourcemaps.write('./maps'))
     .pipe( gulp.dest('./app/css') )
 });

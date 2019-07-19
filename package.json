@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "home de cybermonday 2017",
   "main": "index.js",
+  "browserslist": [
+    "last 2 version",
+    "> 2%"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp"
@@ -36,6 +40,7 @@
     "babelify": "^7.3.0",
     "bootstrap": "^4.3.1",
     "browserify": "^14.4.0",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^7.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.0",
