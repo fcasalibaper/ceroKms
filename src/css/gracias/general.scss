@@ -1,0 +1,31 @@
+.gracias {
+  position: relative;
+  padding-top: 113px;
+  padding-bottom: 80px;
+
+  @include break(xs) {
+    padding-top: 43px;
+    padding-bottom: 55px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+p {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  color: #353b50;
+
+  @include break(xs) {
+    font-size: 18px;
+  }
+
+  b {
+    font-weight: 900;
+  }
+}

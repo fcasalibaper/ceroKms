@@ -1,0 +1,22 @@
+.gracias {
+  hgroup {
+    width: 100%;
+    margin-bottom: 3em;
+    @include break(xs) {
+      margin-bottom: 2em;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1;
+      text-align: center;
+      color: $COLOR_BUTTON_LINK;
+      margin-bottom: .7em;
+
+      @include break(xs) {
+        font-size: 30px;
+      }
+    }
+  } 
+}

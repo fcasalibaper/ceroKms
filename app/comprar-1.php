@@ -1,3 +1,7 @@
+<?php
+  $title = "Más fácil para usted";
+  $bajada = "comprá o refinancia AHORA MISMO!";
+?>
 <!DOCTYPE html>
 <head>
   <?php include("includes/head.inc.html"); ?>
@@ -11,22 +15,9 @@
     <div class="container">
       <div class="row">
         
-        <header>
-          <span>
-            <i></i>
-            <p>Volver atrás</p>
-          </span>
-          <a href="#" class="btn btn--link btn--refinanciar">
-            Refinancia vehículo
-          </a>
-        </header>
+        <?php include("includes/menuCotizador.inc.php"); ?>
 
-        <hgroup>
-          <h1>
-            Más fácil para usted
-            <small>comprá o refinancia AHORA MISMO!</small>
-          </h1>
-        </hgroup>
+        <?php include("includes/titleSections.inc.php"); ?>
 
         <form class="needs-validation" novalidate>
           <div class="form-row">
@@ -102,9 +93,8 @@
   </section>
 
   <!-- footer -->
-  <!-- footer -->
   <?php include("includes/footer.inc.html"); ?>
-  <?php include("includes/modalMarca.inc.html"); ?>
+  <?php include("includes/modalMarca.inc.php"); ?>
   <?php include("includes/scripts.inc.html"); ?>
 
 </body>

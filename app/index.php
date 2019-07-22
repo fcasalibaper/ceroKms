@@ -64,7 +64,7 @@
 
   <!-- footer -->
   <?php include("includes/footer.inc.html"); ?>
-  <?php include("includes/modalMarca.inc.html"); ?>
+  <?php include("includes/modalMarca.inc.php"); ?>
   <?php include("includes/scripts.inc.html"); ?>
 </body>
 

@@ -1,0 +1,103 @@
+$size_dots: 21px;
+$size_line: 5px;
+
+.timeline {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 3.7em;
+
+  .progress {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: $size_line;
+    overflow: visible;
+
+    &-bar {
+      background-color: #21a8d8;
+      height: 5px;
+
+      span {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    &-points {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: $size_line;
+      top: -$size_dots / 2;
+      left: 0;
+      transform: translateY(50%);
+
+      .point {
+        position: absolute;
+        width: $size_dots;
+        height: $size_dots;
+        background-color: #bbb8bc;
+        color: #9b9b9b;
+        border-radius: 100%;
+
+        &:after {
+          position: absolute;
+          font-size: 16px;
+          line-height: 1.11;
+          bottom: -2em;
+        }
+
+        &.active {
+          background-color: $COLOR_BUTTON_LINK;
+          color: #051f61;
+
+          &:before {
+            content: '';
+            border-radius: 100%;
+            width: $size_dots / 2;
+            height: $size_dots / 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            background-color: #fff;
+          }
+        }
+
+        &-1 {
+          left: -1px;
+
+          &:after {
+            content: 'Financiación';
+            text-align: left;
+            left: 0;
+          }
+        }
+
+        &-2 {
+          left: 50%;
+          transform: translateX(-50%);
+          &:after {
+            content: 'Deducible';
+            text-align: center;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        &-3 {
+          right: -1px;
+          &:after {
+            content: 'Planes';
+            text-align: right;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}

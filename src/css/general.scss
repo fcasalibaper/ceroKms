@@ -9,6 +9,11 @@
 
 .container {
   @include make-container();
+
+  &.containerBig {
+    max-width: 886px;
+  }
+
   .row {
     @include make-row();
     @include break(xs) {
@@ -99,6 +104,4 @@
       max-width: 212px;
     }
   }
-
-  
 }

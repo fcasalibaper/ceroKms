@@ -1,0 +1,27 @@
+hgroup.titleSections {
+  display: flex;
+  margin-bottom: 30px;
+  width: 100%;
+
+  h1 {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1;
+    color: #353b50;
+    display: flex;
+    flex-direction: column;
+
+    @include break(xs) {
+      font-size: 24px;
+    }
+
+    small {
+      font-size: 27px;
+      margin-top: 0.4em;
+
+      @include break(xs) {
+        font-size: 20px;
+      }
+    }
+  }
+}
