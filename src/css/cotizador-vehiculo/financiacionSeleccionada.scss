@@ -1,0 +1,59 @@
+.finanSelected {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid 1px #e5e5e5;
+  margin-bottom: 3em;
+  padding-bottom: 34px;
+  
+  @include break(xs) {
+    padding-bottom: 27px;
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 1.85;
+    letter-spacing: -0.43px;
+    color: #051f61;
+    padding: 24px 17px;
+
+    @include break(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 13px 17px;
+
+    @include break(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 28px 16px;
+    }
+
+    &__text {
+      font-size: 18px;
+      letter-spacing: -0.39px;
+      color: #051f61;
+
+      @include break(xs) {
+        margin-bottom: 1.5em;
+      }
+    }
+    a.btn {
+      font-size: 16px;
+      letter-spacing: -0.35px;
+      color: #ffffff;
+      border-radius: 5.5px;
+      background-color: #4a4a4a;
+      text-align: center;
+    }
+  }
+  
+}

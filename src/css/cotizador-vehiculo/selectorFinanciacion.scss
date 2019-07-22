@@ -1,0 +1,130 @@
+.selectorFina {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 4em;
+
+  // title
+  h4 {
+    font-size: 20px;
+    line-height: 1.85;
+    letter-spacing: -0.43px;
+    color: #051f61;
+    margin-bottom: 1em;
+  }
+
+  &__detail {
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.35px;
+    color: #7c7c7c;
+    margin-bottom: 2.5em;
+
+    @include break(xs) {
+      font-size: 16px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    width: 100%;
+
+    @include break(xs) {
+      flex-direction: column;
+    }
+
+    // 3 boxes
+    &__boxes {
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+
+      @include break(xs) {
+        margin-bottom: 2.3em;
+      } 
+
+      &:last-child {
+        margin-right: 0;
+        @include break(xs) {
+          margin-bottom: 0;
+        } 
+      }
+
+      // title plan
+      .text {
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2.06;
+        letter-spacing: -0.39px;
+        color: $COLOR_BUTTON_LINK;
+        margin-bottom: 1em;
+        white-space: nowrap;
+
+        @include break(xs) {
+          margin-bottom: 0.7em;
+        }
+      }
+
+      // plan details
+      .box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include break(xs) {
+          width: 100vw;
+          left: -$PADDING_MOBILE;
+          overflow-x: scroll;
+          padding: 0 $PADDING_MOBILE;
+        }
+
+        span {
+          max-width: 110px;
+          width: 100%;
+          border-radius: 4.8px;
+          border: solid 1.2px #e8e9ed;
+          font-size: 14px;
+          line-height: 1.43;
+          letter-spacing: -0.3px;
+          text-align: center;
+          color: #9b9b9b;
+          padding: 17px 12px;
+          margin-right: 12px;
+          cursor: pointer;
+
+          &:last-child {
+            @include upTo(xs) {
+              margin-right: 0;
+            }
+          }
+
+          a {
+            color: #21a8d8;
+            text-decoration: underline;
+          }
+          
+          &.active,
+          &:hover,
+          &:active {
+            border: solid 1.2px #21a8d8;
+            color: #21a8d8;
+          }
+
+          &:hover,
+          &:active, {
+            color: white;
+            background-color: #21a8d8;
+            a {
+              color: white;
+              text-decoration: underline; 
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
