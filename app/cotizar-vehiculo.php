@@ -1,7 +1,6 @@
 <?php
   $title = "Cotizar vehículo";
   $bajada = "Lorem lorem lorem";
-  $porcentaje = 40;
 ?>
 <!DOCTYPE html>
 
@@ -26,14 +25,15 @@
           <div class="progress">
 
             <div class="progress-points">
-              <div class="point point-1 <?php if ($porcentaje > 0) echo 'active'; ?>"></div>
-              <div class="point point-2 <?php if ($porcentaje >= 50) echo 'active'; ?>"></div>
-              <div class="point point-3 <?php if ($porcentaje >= 100) echo 'active'; ?>"></div>
+              <div class="point point1"></div>
+              <div class="point point2"></div>
+              <div class="point point3"></div>
             </div>
 
-            <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje;?>%"
-              aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100">
-              <span><?php echo $porcentaje;?></span></div>
+            <div class="progress-bar"
+              role="progressbar" 
+              aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
+              <span></span></div>
           </div>
         </aside>
 
@@ -69,22 +69,28 @@
             <div class="selectorFina__items__boxes">
               <span class="text">Su Plan</span>
               <div class="box">
-                <span class="active">12 cuotas de $2.799.807,49</span>
+                <span class="active" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">12 cuotas de $2.799.807,49</span>
               </div>
             </div>
             <div class="selectorFina__items__boxes">
               <span class="text">Crédito Normal</span>
               <div class="box">
-                <span>12 cuotas de $2.799.807,49</span>
-                <span>12 cuotas de $2.799.807,49</span>
-                <span>12 cuotas de $2.799.807,49</span>
-                <span>12 cuotas de $2.799.807,49</span>
+                <span data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">12 cuotas de $2.799.807,49</span>
+                <span data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">12 cuotas de $2.799.807,49</span>
+                <span data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">12 cuotas de $2.799.807,49</span>
+                <span data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">12 cuotas de $2.799.807,49</span>
               </div>
             </div>
             <div class="selectorFina__items__boxes">
               <span class="text">Crédito Inteligente</span>
               <div class="box active">
-                <span>
+                <span data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
                 24/36 Cuotas
                 <a href="#">Consultar ></a>
                 </span>
@@ -93,7 +99,7 @@
           </div>
         </section>
 
-        <button class="btn btn btn--gradient btn--alignRight">Siguiente</button>
+        <button class="btn btn--gradient btn--alignRight">Siguiente</button>
 
       </div>
     </div>
@@ -101,7 +107,7 @@
 
   <!-- footer -->
   <?php include("includes/footer.inc.html"); ?>
-  <?php include("includes/modalMarca.inc.php"); ?>
+  <?php include("includes/modals.inc.php"); ?>
   <?php include("includes/scripts.inc.html"); ?>
 
 </body>

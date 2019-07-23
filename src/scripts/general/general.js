@@ -17,7 +17,104 @@ export default function General() {
             ceroKms.formValidation();
             ceroKms.modal.init();
             ceroKms.typeTextArea();
-            
+            ceroKms.progressBar();
+            ceroKms.popOver();
+            ceroKms.modalPlan.init();
+        },
+
+        popOver: () => {
+            $('[data-toggle="popover"]').popover({
+                trigger: 'hover'
+            })
+        },
+
+        modalPlan: {
+            init: () => {
+                ceroKms.modalPlan.getClicked();
+                ceroKms.modalPlan.closeModal();
+            },
+            getClicked: () => {
+                const $clicked = $('.plan').find('a.btn__link');
+                $clicked.click(function(e) {
+                    e.preventDefault();
+                    let $this = $(this).data('info');
+                    ceroKms.modalPlan.getUlData($this);
+                    ceroKms.modalPlan.getHeaderText($this);
+                })
+            },
+            getUlData: (numberClicked) => {
+                
+                let $ulContent = $('#modalMasInfo').find('.modal-body > ul');
+                
+                // looping objects selected
+                for (var key in dataInfo[numberClicked]) {
+                    if (dataInfo[numberClicked].hasOwnProperty(key)) {
+                        let name = key;
+                        let yesNo = dataInfo[numberClicked][name];
+                        let ele = `
+                            <li>
+                            <span>${key}</span>
+                            ${
+                                typeof yesNo === 'boolean' ? `
+                                <i class="icon icon-${yesNo ? 'yes' : 'no' }"></i> `
+                                :
+                                `
+                                <i class="textIcon">${yesNo}</i>
+                                `
+                            }
+                            </li>
+                        `;
+
+                        // print elements html
+                        $ulContent.append(ele);
+                        
+                    }
+                }
+
+            },
+
+            getHeaderText: (numberClicked) => {
+                let $plan = $('.plan:eq('+numberClicked+')');
+                let $header = $plan.find('.plan__title').html();
+                let $body = $plan.find('.plan__body').html();
+                let $link = $plan.find('.btn.btn-primary').attr('href');
+
+                const $modal = $('#modalMasInfo');
+                let $modalHeader = $modal.find('.modal-header > .title');
+                let $modalPrice = $modal.find('.detail > span');
+                
+                $modal.find('.detail > a').attr('href',$link);
+                $modalHeader.html($header);
+                $modalPrice.html($body);
+
+            },
+
+            closeModal: () => {
+                const $modal = $('#modalMasInfo');
+                const $ul = $modal.find('.modal-body > ul');
+
+                $modal.on('hidden.bs.modal', function (e) {
+                    $ul.html('');
+                });
+            }
+
+        },
+
+        progressBar: () => {
+            const timeline = $('.timeline').find('.progress-bar');
+            let porcentaje = timeline.attr('aria-valuenow');
+            timeline
+                .css('width',`${porcentaje}%`).find('span').text(`${porcentaje}%`);
+
+            if (porcentaje >= 0) {
+                $('.point.point1').addClass('active');
+            } 
+            if (porcentaje >= 50) {
+                $('.point.point2').addClass('active');
+            } 
+            if (porcentaje >= 100) {
+                $('.point.point3').addClass('active');
+            }
         },
 
         typeTextArea: () => {
