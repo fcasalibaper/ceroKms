@@ -1,3 +1,4 @@
+<!-- /. modal marca -->
 <div id="modal" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -15,7 +16,7 @@
         </form>
 
         <div class="module module-marca">
-          <ul class="logoBrands">
+          <!-- <ul class="logoBrands">
             <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
             <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
             <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
@@ -34,7 +35,7 @@
             <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
             <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
             <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-          </ul>
+          </ul> -->
             
           <ul class="list list-text">
             <li>Renault</li>
@@ -148,9 +149,8 @@
     </div>
   </div>
 </div>
-<!-- /. modal marca -->
 
-
+<!-- modal mas info -->
 <div id="modalMasInfo" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

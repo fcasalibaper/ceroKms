@@ -2,6 +2,7 @@
   font-size: 18.5px;
   border-radius: 6.6px;
   padding: .45em .75em;
+  transition: all $ANIMATION_TIMING $ANIMATION_EASING;
 
   &--alignRight {
     margin-left: auto;
@@ -36,5 +37,11 @@
     align-items: center;
     justify-content: center;
     padding: 10px 30px;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-image: radial-gradient(circle at 90% 10%, #0272bc, #541f70);
+    }
   }
 }
