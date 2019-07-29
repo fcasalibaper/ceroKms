@@ -1,7 +1,8 @@
 .modal {
   &#modalMasInfo {
     .modal-dialog {
-      max-width: 878px;
+      // max-width: 878px;
+      max-width: 500px;
     }
     .modal-content {
       border-radius: 16px;
@@ -21,7 +22,7 @@
       }
       .title {
         width: 50%;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
@@ -50,11 +51,11 @@
         }
 
         span {
-          font-size: 18px;
+          font-size: 14px;
           font-weight: 600;
           letter-spacing: -0.39px;
           text-align: center;
-          color: #9b9b9b;
+          color: #969696;
         }
         a.btn {max-width: 152px; margin-top: 1em;}
       }
@@ -82,9 +83,9 @@
     .modal-body {
       overflow-y: scroll;
       h5 {
-        font-size: 20px;
-        line-height: 1.6;
-        letter-spacing: -0.43px;
+        font-size: 16px;
+        /* line-height: 1.6; */
+        /* letter-spacing: -0.43px; */
         color: #0272bc;
         margin-bottom: 1em;
       }
@@ -97,17 +98,17 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: 1em;
+          // margin-bottom: .65em;
           
           span {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 2.06;
             letter-spacing: -0.35px;
             color: #7c7c7c;
           }
           i {
             &.textIcon {
-              font-size: 16px;
+              font-size: 14px;
               letter-spacing: -0.35px;
               color: #7c7c7c;
               font-style: normal;

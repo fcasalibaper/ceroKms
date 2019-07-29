@@ -12,7 +12,7 @@
   <?php include("includes/header.inc.html"); ?>
 
   <section class="forms">
-    <div class="container">
+    <div class="container containerBig">
       <div class="row">
         
         <?php include("includes/menuCotizador.inc.php"); ?>

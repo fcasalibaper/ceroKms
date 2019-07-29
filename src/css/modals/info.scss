@@ -9,7 +9,7 @@
     max-height: 415px;
     
     @include upTo(xs) {
-      columns: 100px 2;
+      columns: 100px 3;
     }
     @include break(xs) {
       margin-top: 28px;
@@ -18,8 +18,8 @@
 
     li {
       cursor: pointer;
-      font-size: 20px;
-      width: 50%;
+      font-size: 16px;
+      width: calc(100% / 3); // poner en 3
       font-weight: 500;
       line-height: 1.5;
       color: #353b50;
@@ -57,7 +57,7 @@
 
   span.withOutModel {
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
@@ -66,7 +66,7 @@
     color: $COLOR_BUTTON_LINK;
 
     @include break(xs) {
-      font-size: 18px;
+      font-size: 16px;
       order: -1;
       margin-top: 28px;
       margin-bottom: 5px;

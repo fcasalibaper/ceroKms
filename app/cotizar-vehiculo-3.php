@@ -4,6 +4,7 @@
 ?>
 
 <script>
+  // ESTE OBJETO RECIBEN LOS PLANES, EN CADA UNO DE LOS CLICKS DE LOS MODALES "MAS INFORMACION", HAY UN ATRIBUTO data-info="0", EL NUMERO CORRESPONDE A LA POSICION DEL OBJETO CORRESPONDIENTE 
   const dataInfo = [
   {
     "Daños Propios al vehículo" :  true,

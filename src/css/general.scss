@@ -11,7 +11,7 @@
   @include make-container();
 
   &.containerBig {
-    max-width: 886px;
+    max-width: 886px !important;
   }
 
   .row {
@@ -42,7 +42,7 @@
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.54;
     letter-spacing: -0.52px;
     color: rgba(0, 0, 0, 0.85);
@@ -73,7 +73,7 @@
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 1.85;
       letter-spacing: -0.43px;
       color: rgba(0, 0, 0, 0.85);

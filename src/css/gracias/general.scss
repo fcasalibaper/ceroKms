@@ -1,10 +1,10 @@
 .gracias {
   position: relative;
-  padding-top: 113px;
+  padding-top: 50px;
   padding-bottom: 80px;
 
   @include break(xs) {
-    padding-top: 43px;
+    padding-top: 40px;
     padding-bottom: 55px;
   }
 
@@ -15,7 +15,7 @@
 }
 
 p {
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1;
   text-align: center;

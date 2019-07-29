@@ -16,27 +16,6 @@
         </form>
 
         <div class="module module-marca">
-          <!-- <ul class="logoBrands">
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Peugeot" /></li>
-            <li><img src="https://via.placeholder.com/50" alt="Renault" /></li>
-          </ul> -->
-            
           <ul class="list list-text">
             <li>Renault</li>
             <li>Renault</li>

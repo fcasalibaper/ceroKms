@@ -77,7 +77,7 @@
           <div class="form-row nextForm">
             <div class="col">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="aceptarTerminos">
+                <input class="form-check-input" type="checkbox" id="aceptarTerminos" checked />
                 <label class="form-check-label" for="aceptarTerminos">
                   Acepto los <span>términos y condiciones</span>
                 </label>

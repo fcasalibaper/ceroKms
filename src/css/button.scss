@@ -3,6 +3,7 @@
   border-radius: 6.6px;
   padding: .45em .75em;
   transition: all $ANIMATION_TIMING $ANIMATION_EASING;
+  z-index: 2;
 
   &--alignRight {
     margin-left: auto;
@@ -12,14 +13,14 @@
   &--link {
     padding: 0;
     border-radius: 0;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 900;
     line-height: 1;
     color: $COLOR_BUTTON_LINK;
 
-    @include break(xs) {
-      font-size: 14px;
-    }
+    // @include break(xs) {
+    //   font-size: 14px;
+    // }
   }
 
   &--gradient {
@@ -27,7 +28,7 @@
     width: 100%;
     max-width: 264px;
     height: 61px;
-    background-image: radial-gradient(circle at 50% 50%, #0272bc, #541f70);
+    background-color: $COLOR_BUTTON_LINK;
     font-size: 17px;
     font-weight: 500;
     line-height: 1;
@@ -41,7 +42,6 @@
     &:hover,
     &:focus {
       color: white;
-      background-image: radial-gradient(circle at 90% 10%, #0272bc, #541f70);
     }
   }
 }
