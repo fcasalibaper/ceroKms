@@ -19,7 +19,17 @@
   }
 }
 
+.col {
+  @include break(xs) {
+    flex-basis: unset;
+  }
+}
+
 form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
   label {
     font-size: 14px;
     font-weight: 500;
@@ -27,6 +37,7 @@ form {
     color: $COLOR_INPUT;
     margin-bottom: 15px;
     order: -1;
+    display: flex;
 
     @include break(xs) {
       font-size: 15px;
@@ -79,11 +90,13 @@ form {
     border-radius: 3px;
     border: solid 1px $COLOR_BORDER;
     background-color: rgba(241, 241, 241, 0.24);
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1;
     letter-spacing: normal;
     padding: 5px 26px;
+    display: flex;
+    order: 1;
 
     @include break(xs) {
       font-size: 14px;
@@ -138,7 +151,10 @@ form {
   .form-check {
     display: flex;
     padding-left: 0;
-    padding-top: 2em;
+
+    @include upTo(xs) {
+      padding-top: 2em;
+    }
   }
 
   input[type="checkbox"] {

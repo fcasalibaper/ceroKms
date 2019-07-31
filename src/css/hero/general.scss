@@ -24,7 +24,7 @@
         left: 30%;
         max-width: 77px;
         opacity: 0;
-        @include animation(1ms, 3s, opacity, linear);
+        @include animation(200ms, 2s, opacity, linear);
         @include break(xs) {
           top: 10%;
           left: 78%;
@@ -36,7 +36,7 @@
         right: 7%;
         max-width: 77px;
         opacity: 0;
-        @include animation(0ms, 4s, opacity, linear);
+        @include animation(300ms, 3s, opacity, linear);
 
         @include break(xs) {
           display: none;
@@ -47,7 +47,7 @@
         max-width: 833px;
         // left: 50%;
         transform: translateX(-50%);
-        @include animation(0ms, 10s, moving, linear, infinite);
+        @include animation(0ms, 20s, moving, linear, infinite);
 
         @include break(xs) {
           transform: translateX(0);
@@ -99,8 +99,12 @@
     @include make-col(7);
     
     img {
+      position: relative;
       max-width: 88%;
       align-self: flex-start;
+      @include upTo(sm) {
+        @include animation(0ms, 1s, fadeLeft, linear);
+      }
     }
 
     @include break(xs) {

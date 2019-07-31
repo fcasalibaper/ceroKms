@@ -40,7 +40,7 @@
     Example usage: 
     @include animation(10s, 5s, changecolour)
  */
- @mixin animation ($delay, $duration, $animation, $easing : linear, $repeat : 1) {
+ @mixin animation ($delay : 0, $duration : 250ms, $animation : fade, $easing : linear, $repeat : 1) {
   -webkit-animation-delay: $delay;
   -webkit-animation-duration: $duration;
   -webkit-animation-name: $animation;

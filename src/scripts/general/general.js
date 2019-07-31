@@ -12,7 +12,7 @@ export default function General() {
         },
 
         ready: () => {
-            ceroKms.toolResponsive();
+            // ceroKms.toolResponsive();
             ceroKms.hamburguerMenu();
             ceroKms.formValidation();
             ceroKms.modal.init();

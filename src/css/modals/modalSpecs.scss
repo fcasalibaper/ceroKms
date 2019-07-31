@@ -19,6 +19,7 @@
       padding-bottom: 2em;
       @include break(xs) {
         padding-top: 2em;
+        height: 45%;
       }
       .title {
         width: 50%;
@@ -57,7 +58,14 @@
           text-align: center;
           color: #969696;
         }
-        a.btn {max-width: 152px; margin-top: 1em;}
+        a.btn {
+          max-width: 152px;
+          margin-top: 1em;
+
+          @include break(xs) {
+            display: flex;
+          }
+        }
       }
 
       @include break(xs) {
@@ -82,6 +90,9 @@
 
     .modal-body {
       overflow-y: scroll;
+      @include break(xs) {
+        height: 55%;
+      }
       h5 {
         font-size: 16px;
         /* line-height: 1.6; */

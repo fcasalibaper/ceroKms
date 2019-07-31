@@ -14,7 +14,7 @@ $xl: map-get($grid-breakpoints, xl);
   @if $media==md {
     @media only screen and (min-width: $md) and (max-width:$lg - 1){@content;}
   }
-  @else if $media==sm {
+  @if $media==sm {
     @media only screen and (min-width:$sm) and (max-width:$md - 1){@content;}
   }
   @else if $media==xs {

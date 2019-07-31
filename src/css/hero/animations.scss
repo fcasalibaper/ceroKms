@@ -19,3 +19,16 @@
     opacity: 1;
   }
 }
+
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    left: 50%;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
