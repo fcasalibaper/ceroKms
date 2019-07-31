@@ -24,6 +24,7 @@ src/, es donde están todos los archivos que se modifican, como css y js, por ej
 Lo que respecta al .js funciona como se explica anteriormente, se modifican files en <code>src/scripts/*.js</code>, se compilan y se sirven, compilados y minificados en app/scripts/ceroKms.min.js.
 El JS se se escribe en ES6, que si bien no es compatible con algunos navegadores no tan modernos, un plugin del compilador (BABEL) lo "traduce" a una version compatible para todos los mismo.
 
+```bash
 |-- ceroKms/
     |-- app/
     |   |-- css/
@@ -32,3 +33,4 @@ El JS se se escribe en ES6, que si bien no es compatible con algunos navegadores
     |-- scr/
         |-- css/
         |-- scripts/
+ ```
