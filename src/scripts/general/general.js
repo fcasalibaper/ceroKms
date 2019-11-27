@@ -232,7 +232,7 @@ export default function General() {
                 const $logoslis = $ulLogos.find('li');
 
                 $liText.on('click', function() {
-                    console.log('lptm: ',clicked);
+                    // console.log('getLiFiltered: ',clicked);
                     let text = $(this).text();
                     if (clicked.hasClass('open')) {
                          // if => avoid click others lis
