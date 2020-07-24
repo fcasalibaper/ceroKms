@@ -78,7 +78,8 @@
           </div>
         </section>
 
-        <button class="btn btn--gradient btn--alignRight">Siguiente</button>
+        <!-- <button class="btn btn--gradient btn--alignRight">Siguiente</button> -->
+        <a href="cotizar-vehiculo-3.php" class="btn btn--gradient button" href=""><span>Siguiente</span></a>
 
       </div>
     </div>

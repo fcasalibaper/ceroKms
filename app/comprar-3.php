@@ -74,7 +74,8 @@
               </div>
             </div>
             <div class="col col--end">
-              <button class="btn btn--gradient" type="submit"><span>Siguiente</span></button>
+              <!-- <button class="btn btn--gradient" type="submit"><span>Siguiente</span></button> -->
+              <a class="btn btn--gradient button" href="gracias.php"><span>Siguiente</span></a>
             </div>
           </div>
         </form>

@@ -80,7 +80,7 @@ gulp.task('sass', function () {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(sourcemaps.write('./maps'))
+    // .pipe(sourcemaps.write('./maps'))
     .pipe( gulp.dest('./app/css') )
 });
 
@@ -114,7 +114,7 @@ gulp.task('browser-sync', function() {
 // server
 gulp.task('localServer', function() {
     browserSync.init({
-      port:2345,
+      port:2346,
       server: {
           baseDir: "app/"
       }
@@ -124,9 +124,9 @@ gulp.task('localServer', function() {
 // php
 gulp.task('php', function() {
   php.server({ 
-    //open:true,
+    open:true,
     base: 'app',
-    port: 8020,
+    port: 8021,
     keepalive: true,
     files: ['app/**'],
     serveStatic: ['app']

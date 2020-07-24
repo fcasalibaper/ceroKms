@@ -47,7 +47,8 @@
         }
       }
 
-      button {
+      button,
+      a.button {
         @include upTo(xs) {
           align-self: flex-end;
         }

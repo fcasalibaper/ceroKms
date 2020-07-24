@@ -270,7 +270,8 @@
           </div>
         </section>
 
-        <button class="btn btn--gradient btn--alignRight">Siguiente</button>
+        <!-- <button class="btn btn--gradient btn--alignRight">Siguiente</button> -->
+        <a class="btn btn--gradient button" href="gracias.php"><span>Siguiente</span></a>
 
       </div>
     </div>

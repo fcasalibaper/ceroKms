@@ -99,7 +99,8 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
           </div>
         </section>
 
-        <button class="btn btn--gradient btn--alignRight">Siguiente</button>
+        <!-- <button class="btn btn--gradient btn--alignRight">Siguiente</button> -->
+        <a href="cotizar-vehiculo-2.php" class="btn btn--gradient button" href=""><span>Siguiente</span></a>
 
       </div>
     </div>
